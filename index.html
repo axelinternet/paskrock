@@ -11,10 +11,28 @@
   <div class="main">
     <div class="container">
       <div class="sara-face">
+        <img src='img/hair.png' class="sara-img animation1" />
+        <img src='img/eyes.png' class="sara-img animation2" />
+        <img src='img/m1.png' class="sara-img animation3" id='mouth'/>
       </div>
-      <iframe src="https://open.spotify.com/embed?uri=spotify:album:1DFixLWuPkv3KT3TnV35m3&theme=white" width="380" height="460" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <iframe src="https://open.spotify.com/embed?uri=spotify:user:sarawr:playlist:0xiyyuNwo0APhRSghGrmc9&theme=white" width="380" height="460" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
   </div>
+  <script type="text/javascript" charset="utf-8" async defer>
+      var getNewMouth = window.setInterval(function() {
+        console.log('getting new mouth')
+        var index = Math.floor(Math.random() * 10)
+        if (index < 5) {
+          var mouthIndex = 1
+        } else if (index < 8) {
+          var mouthIndex = 2
+        } else {
+          var mouthIndex = 3
+        }
+        var mouth = document.getElementById('mouth')
+        mouth.src = 'img/m' + mouthIndex + '.png'
+      }, 2000)
+  </script>
 </body>
 </html>
 
